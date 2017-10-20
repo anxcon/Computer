@@ -33,7 +33,7 @@ namespace Computer.API
                 {
                     continue;
                 }
-                field.SetValue(this, Settings.GetValue($"{this.Name}.{field.Name}", field.FieldType, field.GetValue(this)));
+                field.SetValue(this, Settings.GetValue($"{this.Name}.{field.Name}", field.GetValue(this)));
             }
             this.Load();
             this.Loaded = true;

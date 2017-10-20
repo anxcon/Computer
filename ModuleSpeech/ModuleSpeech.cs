@@ -77,15 +77,6 @@ namespace ModuleSpeech
             //ModuleSpeech.Instance.recognizer.LoadGrammarAsync(grammar);
             ModuleSpeech.Instance.library.Add(grammar.Name, action);
         }
-        //public static VoiceInfo CurrentVoiceInfo
-        //{
-        //    get
-        //    {
-        //        return ModuleSpeech.Instance.synthesizer.Voice;
-        //    }
-        //}
-
-
         #region "Events"
         private void Recognizer_AudioLevelUpdated(object sender, AudioLevelUpdatedEventArgs e) //EventArgs
         {

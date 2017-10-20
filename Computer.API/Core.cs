@@ -42,20 +42,19 @@ namespace Computer.API
             int started = 0;
             foreach (ModuleBase module in this.modules.Values)
             {
-                if (!module.Loaded)
+                if (!module.Enabled || !module.Loaded)
                 {
                     continue;
                 }
                 try
                 {
                     module.StartModule();
+                    started += 1;
                 }
                 catch (Exception exc)
                 {
                     Logger.Log(exc);
-                    continue;
                 }
-                started += 1;
             }
             Logger.Log($"Started {started} modules");
         }
@@ -105,16 +104,20 @@ namespace Computer.API
             {
                 return true;
             }
+            if(!module.Enabled)
+            {
+                return false;
+            }
             foreach (string dep in module.Dependencies)
             {
-                ModuleBase mod = this.modules[dep];
-                if (mod == null)
+                ModuleBase depmod = this.modules[dep];
+                if (depmod == null)
                 {
                     Logger.LogErr($"Required dependency {dep} is missing");
                     module.Enabled = false;
                     return false;
                 }
-                if (!mod.Enabled || !LoadModule(mod))
+                if (!depmod.Enabled || !LoadModule(depmod))
                 {
                     Logger.LogErr($"Required dependency {dep} not loaded");
                     module.Enabled = false;

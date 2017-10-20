@@ -27,8 +27,9 @@ namespace Computer.API
             }
             Settings.Instance.list.Add(name, obj.ToString());
         }
-        public static object GetValue(string name, Type type, object def)
+        public static object GetValue(string name, object def)
         {
+            Type type = def.GetType();
             if (!Settings.Instance.list.ContainsKey(name))
             {
                 Settings.AddValue(name, def);
@@ -48,14 +49,6 @@ namespace Computer.API
             }
             MethodInfo mi = type.GetMethod("Parse", new Type[] { typeof(string) });
             return mi.Invoke(null, new object[] { Settings.Instance.list[name] });
-        }
-        public static object GetValue(string name, object def)
-        {
-            return GetValue(name, def.GetType(), def);
-        }
-        public static T GetValue<T>(string name, T def) where T : IConvertible
-        {
-            return (T)GetValue(name, typeof(T), def);
         }
         public static void SetValue(string name, object obj)
         {
