@@ -21,7 +21,7 @@ namespace ModuleIRC
         private string trigger = ".";
 
 
-        private IrcClient client;
+        public IrcClient Client { get; private set; }
 
         public ModuleIRC()
         {
@@ -30,16 +30,16 @@ namespace ModuleIRC
         protected override void Load()
         {
             IrcUser user = new IrcUser(this.nick, "testing", this.password);
-            this.client = new IrcClient(this.servaddy, user);
-            this.client.ChannelMessageRecieved += ChannelMessageRecieved;
-            this.client.ConnectionComplete += ConnectionComplete;
-            this.client.UserJoinedChannel += UserJoinedChannel;
+            this.Client = new IrcClient(this.servaddy, user);
+            this.Client.ChannelMessageRecieved += ChannelMessageRecieved;
+            this.Client.ConnectionComplete += ConnectionComplete;
+            this.Client.UserJoinedChannel += UserJoinedChannel;
             
 
         }
         protected override void Start()
         {
-            this.client.ConnectAsync();
+            this.Client.ConnectAsync();
         }
 
         private void ChannelMessageRecieved(object sender, PrivateMessageEventArgs e)
@@ -59,7 +59,7 @@ namespace ModuleIRC
                 LogErr("No IRC channel currently set to join");
                 return;
             }
-            this.client.JoinChannel(this.channel);
+            this.Client.JoinChannel(this.channel);
             
         }
 
