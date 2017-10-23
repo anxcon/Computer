@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuleSpeech", "ModuleSpeec
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatSharp", "ChatSharp\ChatSharp.csproj", "{4033AFFA-BEA3-4BDF-84EA-59A23360FD36}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuleIRC", "ModuleIRC\ModuleIRC.csproj", "{910E22E1-88D6-4046-B724-59D39DE0DCC5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{4033AFFA-BEA3-4BDF-84EA-59A23360FD36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4033AFFA-BEA3-4BDF-84EA-59A23360FD36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4033AFFA-BEA3-4BDF-84EA-59A23360FD36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{910E22E1-88D6-4046-B724-59D39DE0DCC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{910E22E1-88D6-4046-B724-59D39DE0DCC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{910E22E1-88D6-4046-B724-59D39DE0DCC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{910E22E1-88D6-4046-B724-59D39DE0DCC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
