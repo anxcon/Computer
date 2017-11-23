@@ -21,20 +21,6 @@ namespace Computer.Weather
 
         }
 
-        //public override void ParseCommand(CommandMessage command)
-        //{
-        //    Command foundCommand = Commands.Find(c => c.Triggers.Contains(command.Command));
-        //    switch (foundCommand.Name)
-        //    {
-        //        case "Weather":
-        //            getWeather(command);
-        //            break;
-        //        case "Forecast":
-        //            getForecast(command);
-        //            break;
-        //    }
-        //}
-
         private List<Weather> GetForecast(string loc)
         {
             int days = 6;
