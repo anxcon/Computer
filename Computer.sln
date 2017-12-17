@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuleWeather", "ModuleWeat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuleDrives", "ModuleDrives\ModuleDrives.csproj", "{62AC25AE-85D7-43F0-B5F9-38F4F955C0D8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuleLists", "ModuleLists\ModuleLists.csproj", "{FBE937A9-F773-4C56-8A3D-9F677E0AFE27}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,13 +49,15 @@ Global
 		{955E4EF0-58F1-4DDC-AF3B-6CF8B48FD729}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{955E4EF0-58F1-4DDC-AF3B-6CF8B48FD729}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5013988E-46B7-4E67-B878-618E6D70260A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5013988E-46B7-4E67-B878-618E6D70260A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5013988E-46B7-4E67-B878-618E6D70260A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5013988E-46B7-4E67-B878-618E6D70260A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{62AC25AE-85D7-43F0-B5F9-38F4F955C0D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{62AC25AE-85D7-43F0-B5F9-38F4F955C0D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62AC25AE-85D7-43F0-B5F9-38F4F955C0D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62AC25AE-85D7-43F0-B5F9-38F4F955C0D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBE937A9-F773-4C56-8A3D-9F677E0AFE27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBE937A9-F773-4C56-8A3D-9F677E0AFE27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBE937A9-F773-4C56-8A3D-9F677E0AFE27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBE937A9-F773-4C56-8A3D-9F677E0AFE27}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
