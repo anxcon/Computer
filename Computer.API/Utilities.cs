@@ -3,6 +3,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
+using System.Text.RegularExpressions;
 
 namespace Computer.API
 {
@@ -61,5 +62,17 @@ namespace Computer.API
         //{
         //    return new XmlHandler(Utilities.GetHttpData(url));
         //}
+        public static bool StringIsAlphaNumeric(string text)
+        {
+            return Regex.IsMatch(text, "^[a-zA-Z0-9]+$");
+        }
+        public static bool StringIsNumeric(string text)
+        {
+            return Regex.IsMatch(text, "^[0-9]+$");
+        }
+        public static bool IsRegexMatch(string text, string pattern)
+        {
+            return Regex.IsMatch(text, pattern);
+        }
     }
 }
